@@ -9,7 +9,6 @@ MAX_CONNECTIONS=${MAX_CONNECTIONS:-128}
 exec /opt/MTProxy/objs/bin/mtproto-proxy \
   -u nobody \
   -H "${PORT}" \
-  -p 8888 \
   -S "${SECRET}" \
   -C 256 \
   -c "${MAX_CONNECTIONS}" \
