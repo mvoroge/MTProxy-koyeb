@@ -7,10 +7,10 @@ PORT=${PORT:-443}
 
 exec /opt/MTProxy/objs/bin/mtproto-proxy \
   -u nobody \
-  -H $PORT \
+  -H "${PORT}" \
   -p 8888 \
-  -S $SECRET \
+  -S "${SECRET}" \
+  -C 256 \
   --aes-pwd /opt/MTProxy/proxy-secret /opt/MTProxy/proxy-multi.conf \
   --http-stats \
-  --nat-info 0.0.0.0:0.0.0.0 \
   -M 1
