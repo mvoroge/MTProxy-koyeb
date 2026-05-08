@@ -15,7 +15,7 @@ done &
 
 exec /opt/MTProxy/objs/bin/mtproto-proxy \
   -u nobody \
-  -p "${PORT}" \
+  -p 0.0.0.0:$PORT \
   -S "${SECRET}" \
   -C 256 \
   -c "${MAX_CONNECTIONS}" \
